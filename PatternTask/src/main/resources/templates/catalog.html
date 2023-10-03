@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Catalog</title>
+</head>
+<body>
+<h1>Movie Catalog</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Country of Origin</th>
+        <th>Description</th>
+        <th>Director</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${catalog}">
+        <td th:text="${movie.title}"></td>
+        <td th:text="${movie.countryOfOrigin}"></td>
+        <td th:text="${movie.description}"></td>
+        <td th:text="${movie.director}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
